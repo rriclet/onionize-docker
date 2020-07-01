@@ -8,7 +8,7 @@ ENV DOCKER_HOST unix:///tmp/docker.sock
 RUN apk -U --no-progress upgrade \
  && apk -U --no-progress add tor supervisor
 
-ENV DOWNLOAD_URL https://github.com/jwilder/docker-gen/releases/download/$DOCKERGEN_VERSION/docker-gen-alpine-linux-amd64-$DOCKERGEN_VERSION.tar.gz
+ENV DOWNLOAD_URL https://github.com/jwilder/docker-gen/releases/download/$DOCKERGEN_VERSION/docker-gen-alpine-linux-armhf-$DOCKERGEN_VERSION.tar.gz
 RUN wget -qO- $DOWNLOAD_URL | tar xvz -C /usr/local/bin
 
 COPY files/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
